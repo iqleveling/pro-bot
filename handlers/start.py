@@ -10,3 +10,6 @@ def menu():
 @Client.on_message(filters.command("start"))
 async def start(client, message):
     await message.reply("🚀 PRO BOT READY", reply_markup=menu())
+@Client.on_message(filters.text)
+async def test_reply(client, message):
+    await message.reply("Bot is working ✅")
